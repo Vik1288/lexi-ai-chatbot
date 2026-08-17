@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Lexi AI - AI Assistant</title>
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-top">
+
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <span>Lexi AI</span>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+                <i class="fa-solid fa-plus"></i>
+                New Chat
+            </button>
+
+        </div>
+
+        <div class="chat-history">
+
+            <div class="history-title">
+                <span>Recent Chats</span>
+            </div>
+
+            <div id="historyList"></div>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <button class="sidebar-btn" id="themeBtn">
+                <i class="fa-solid fa-moon"></i>
+                <span>Dark Mode</span>
+            </button>
+
+            <button class="sidebar-btn" id="clearBtn">
+                <i class="fa-solid fa-trash"></i>
+                <span>Clear Chat</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- Main -->
+    <main class="main">
+
+        <!-- Header -->
+        <header class="header">
+
+            <div class="header-left">
+
+                <button class="menu-btn" id="menuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+                    <h2>Lexi AI</h2>
+                    <div class="status">
+                        <span class="status-dot"></span>
+                        Online
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="header-actions">
+
+                <button title="New Chat" id="headerNewChat">
+                    <i class="fa-solid fa-pen-to-square"></i>
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- Chat Area -->
+        <section class="chat-container" id="chatContainer">
+
+            <div class="welcome" id="welcome">
+
+                <div class="welcome-icon">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+
+                <h1>
+                    How can I help you today?
+                </h1>
+
+                <p>
+                    Ask me anything. I can help you with coding,
+                    writing, learning, ideas and much more.
+                </p>
+
+
+                <div class="suggestions">
+
+                    <button class="suggestion"
+                            data-prompt="Create a modern HTML landing page">
+                        <i class="fa-solid fa-code"></i>
+                        <span>
+                            <strong>Build something</strong>
+                            <small>Create a modern website</small>
+                        </span>
+                    </button>
+
+                    <button class="suggestion"
+                            data-prompt="Explain JavaScript promises in simple language">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <span>
+                            <strong>Learn something</strong>
+                            <small>Explain a difficult topic</small>
+                        </span>
+                    </button>
+
+                    <button class="suggestion"
+                            data-prompt="Give me 5 creative business ideas">
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <span>
+                            <strong>Get ideas</strong>
+                            <small>Generate creative ideas</small>
+                        </span>
+                    </button>
+
+                    <button class="suggestion"
+                            data-prompt="Write a professional LinkedIn post for me">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <span>
+                            <strong>Write something</strong>
+                            <small>Create professional content</small>
+                        </span>
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div id="messages"></div>
+
+        </section>
+
+
+        <!-- Input -->
+        <div class="input-wrapper">
+
+            <div class="input-box">
+
+                <textarea
+                    id="messageInput"
+                    rows="1"
+                    placeholder="Message Lexi AI..."
+                    autocomplete="off"></textarea>
+
+                <button class="send-btn"
+                        id="sendBtn"
+                        title="Send message">
+
+                    <i class="fa-solid fa-arrow-up"></i>
+
+                </button>
+
+            </div>
+
+            <div class="input-footer">
+                Lexi AI can make mistakes. Check important information.
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
